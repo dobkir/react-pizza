@@ -7,7 +7,9 @@ function PizzaBlock({ name, imageUrl, price, types, sizes }) {
   const availableSizes = [26, 30, 40];
 
   const [activeType, setActiveType] = React.useState(types[0]);
+  // TODO: Проверить почему не выбирается по умолчанию первый размер при первом рендере
   const [activeSize, setActiveSize] = React.useState(sizes[0]);
+
   const onSelectType = (index) => {
     setActiveType(index);
   };
